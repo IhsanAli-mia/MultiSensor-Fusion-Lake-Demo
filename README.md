@@ -32,15 +32,15 @@ Python 3.7+
 
 Required packages (install via pip install -r requirements.txt):
 ```
-    s3fs
-    rasterio
-    numpy
-    tifffile
-    zarr
-    pystac
-    python-dateutil
-    minio
-    GDAL
+s3fs
+rasterio
+numpy
+tifffile
+zarr
+pystac
+python-dateutil
+minio
+GDAL
 ```
 ## Usage
 
@@ -48,7 +48,7 @@ Required packages (install via pip install -r requirements.txt):
 
     Ensure MinIO is running locally:
 ```
-    minio server /data
+minio server /data
 ```
 Use the following credentials (as in the script):
 
