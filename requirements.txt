@@ -1,0 +1,12 @@
+s3fs
+rasterio
+numpy
+tifffile
+zarr
+pystac
+pystac-client
+python-dateutil
+minio
+gdal
+intake
+xarray
