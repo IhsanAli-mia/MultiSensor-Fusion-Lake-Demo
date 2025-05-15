@@ -18,19 +18,20 @@ Object Storage: MinIO (S3-compatible)
 
 ## Features
 
-Reprojects satellite imagery to a global coordinate reference system (ECEF)
+    Reprojects satellite imagery to a global coordinate reference system (ECEF)
 
-Supports ingestion of both single files and directories
+    Supports ingestion of both single files and directories
 
-Uploads processed data to an object store using S3-compatible APIs
+    Uploads processed data to an object store using S3-compatible APIs
 
-Uses STAC metadata and prepares for integration with Zarr format
+    Uses STAC metadata and integrates with Zarr format
 
 ## Requirements
 
 Python 3.7+
 
 Required packages (install via pip install -r requirements.txt):
+```
     s3fs
     rasterio
     numpy
@@ -40,15 +41,15 @@ Required packages (install via pip install -r requirements.txt):
     python-dateutil
     minio
     GDAL
-
-Usage
+```
+## Usage
 
     Start Local MinIO Server
 
     Ensure MinIO is running locally:
-
-minio server /data
-
+```
+    minio server /data
+```
 Use the following credentials (as in the script):
 
     Access Key: minioadmin
@@ -61,7 +62,7 @@ Prepare Data
 
     Place corresponding MTL metadata files in: ./Test/38-Cloud_95-Cloud_Test_Metadata_Files/
 
-Run Script
+Run Script **stage.ipynb**
 
 The main script:
 
@@ -69,6 +70,10 @@ The main script:
 
     Reprojects the image to ECEF (EPSG:4978)
 
-    Uploads the result to the fusion-lake bucket in MinIO
+    Converts it into a zarr compressed array
+
+    Creates a corresponding STAC Metadata file
+
+    Uploads the zarr array and the STAC file to the fusion-lake bucket in MinIO
 
 
