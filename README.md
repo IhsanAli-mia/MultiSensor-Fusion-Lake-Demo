@@ -14,7 +14,7 @@ fusion-lake/
 │   └── __init__.py
 ├── workflows/
 │   ├── [x] ingestion_dag.py   (Prefect)
-│   └── [ ] posterior_dag.py   (Papermill → Zarr)
+│   └── [x] posterior_dag.py   (Papermill → Zarr)
 ├── .github/workflows/
 │   ├── [ ] ci.yml           ← lint + unit + stac-validator
 │   └── [ ] nightly.yml      ← schedule: 'posterior_dag' on UTC 00:30
